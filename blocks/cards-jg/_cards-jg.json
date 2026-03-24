@@ -87,14 +87,14 @@
           "component": "text",
           "valueType": "string",
           "name": "background-color",
-          "label": "Card Background Color (e.g. #1a73e8 or blue)",
+          "label": "Background Color",
           "value": ""
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "text-color",
-          "label": "Card Text Color (e.g. #ffffff or white)",
+          "label": "Text Color",
           "value": ""
         }
       ]

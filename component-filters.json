@@ -43,27 +43,19 @@
       "product-list-page",
       "product-recommendations",
       "targeted-block",
-      "text",
-      "hero-v2",
-      "product-teaser",
-      "quote",
-      "tabs",
-      "video",
-      "blog-tiles",
-      "blog-post",
-      "circle-carousel",
-      "hero-cta",
-      "newsletter",
-      "promotional-hero",
-      "search-bar",
-      "store-locator",
-      "top-banner"
+      "text"
     ]
   },
   {
     "id": "accordion",
     "components": [
       "accordion-item"
+    ]
+  },
+  {
+    "id": "cards-jg",
+    "components": [
+      "card-jg"
     ]
   },
   {
@@ -76,6 +68,23 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "circle-carousel",
+    "components": [
+      "circle-carousel-item"
+    ]
+  },
+  {
+    "id": "circle-carousel-item",
+    "components": []
+  },
+  {
+    "id": "circle-carousel-cell",
+    "components": [
+      "text",
+      "image"
     ]
   },
   {
@@ -96,18 +105,6 @@
     ]
   },
   {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
-  },
-  {
-    "id": "circle-carousel",
-    "components": [
-      "circle-carousel-item"
-    ]
-  },
-  {
     "id": "search-bar",
     "components": []
   },
@@ -118,9 +115,19 @@
     ]
   },
   {
-    "id": "cards-jg",
+    "id": "store-locator-item",
+    "components": []
+  },
+  {
+    "id": "store-locator-cell",
     "components": [
-      "card-jg"
+      "text"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
     ]
   }
 ]
