@@ -612,6 +612,80 @@
           }
         },
         {
+          "title": "Product Hero",
+          "id": "product-hero",
+          "model": "product-hero",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "alt",
+                  "selector": "div>div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "name",
+                  "selector": "div>div:nth-child(2)>h2"
+                },
+                {
+                  "name": "description",
+                  "selector": "div>div:nth-child(2)>p:first-of-type"
+                },
+                {
+                  "name": "cta-text",
+                  "selector": "div>div:nth-child(2)>p:last-of-type>a"
+                },
+                {
+                  "name": "cta-href",
+                  "selector": "div>div:nth-child(2)>p:last-of-type>a[href]"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Product Hero (Dark)",
+          "id": "product-hero-dark",
+          "model": "product-hero",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "alt",
+                  "selector": "div>div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "name",
+                  "selector": "div>div:nth-child(2)>h2"
+                },
+                {
+                  "name": "description",
+                  "selector": "div>div:nth-child(2)>p:first-of-type"
+                },
+                {
+                  "name": "cta-text",
+                  "selector": "div>div:nth-child(2)>p:last-of-type>a"
+                },
+                {
+                  "name": "cta-href",
+                  "selector": "div>div:nth-child(2)>p:last-of-type>a[href]"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Product List Page",
           "id": "product-list-page",
           "model": "product-list-page",

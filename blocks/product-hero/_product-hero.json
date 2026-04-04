@@ -1,0 +1,94 @@
+{
+  "definitions": [
+    {
+      "title": "Product Hero",
+      "id": "product-hero",
+      "model": "product-hero",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 2,
+          "fields": [
+            { "name": "image", "selector": "div>div:nth-child(1)>picture>img[src]" },
+            { "name": "alt", "selector": "div>div:nth-child(1)>picture>img[alt]" },
+            { "name": "name", "selector": "div>div:nth-child(2)>h2" },
+            { "name": "description", "selector": "div>div:nth-child(2)>p:first-of-type" },
+            { "name": "cta-text", "selector": "div>div:nth-child(2)>p:last-of-type>a" },
+            { "name": "cta-href", "selector": "div>div:nth-child(2)>p:last-of-type>a[href]" }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Product Hero (Dark)",
+      "id": "product-hero-dark",
+      "model": "product-hero",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 2,
+          "fields": [
+            { "name": "image", "selector": "div>div:nth-child(1)>picture>img[src]" },
+            { "name": "alt", "selector": "div>div:nth-child(1)>picture>img[alt]" },
+            { "name": "name", "selector": "div>div:nth-child(2)>h2" },
+            { "name": "description", "selector": "div>div:nth-child(2)>p:first-of-type" },
+            { "name": "cta-text", "selector": "div>div:nth-child(2)>p:last-of-type>a" },
+            { "name": "cta-href", "selector": "div>div:nth-child(2)>p:last-of-type>a[href]" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-hero",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Product Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "alt",
+          "label": "Image Alt Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "name",
+          "label": "Product Name",
+          "value": "",
+          "description": "Displayed as the main heading"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "description",
+          "label": "Short Description",
+          "value": "",
+          "description": "Brief product summary shown below the name"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cta-text",
+          "label": "CTA Button Text",
+          "value": "Shop Now"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cta-href",
+          "label": "CTA Button URL",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
