@@ -1379,7 +1379,65 @@
   },
   {
     "id": "promotional-hero-jg",
-    "fields": []
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgcolor",
+        "label": "Background Color",
+        "value": "#003087",
+        "description": "Any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text-color",
+        "label": "Text Color",
+        "value": "#ffffff",
+        "description": "Any valid CSS color for the main description text"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "columns",
+        "label": "Columns (side by side)",
+        "value": "3",
+        "options": [
+          {
+            "name": "1",
+            "value": "1"
+          },
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-button-color",
+        "label": "CTA Button Color",
+        "value": "#ff6b00",
+        "description": "Any valid CSS color for the CTA button background"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-text-color",
+        "label": "CTA Button Text Color",
+        "value": "#ffffff",
+        "description": "Any valid CSS color for the CTA button label text"
+      }
+    ]
   },
   {
     "id": "promotional-hero",
