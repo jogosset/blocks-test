@@ -120,6 +120,65 @@
           }
         },
         {
+          "title": "Cards (JPG)",
+          "id": "cards-jg",
+          "filter": "cards-jg",
+          "plugins": {
+            "da": {
+              "title": "Cards (JPG)",
+              "rows": 1,
+              "columns": 5
+            }
+          }
+        },
+        {
+          "title": "Card (JPG)",
+          "id": "card-jg",
+          "model": "card-jg",
+          "plugins": {
+            "da": {
+              "title": "Card (JPG)",
+              "rows": 1,
+              "columns": 5,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(2)"
+                },
+                {
+                  "name": "body",
+                  "selector": "div:nth-child(3)"
+                },
+                {
+                  "name": "background-color",
+                  "selector": "div:nth-child(4)"
+                },
+                {
+                  "name": "text-color",
+                  "selector": "div:nth-child(5)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Promotional Hero (JPG)",
+          "id": "promotional-hero-jg",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"promotional-hero-jg\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div><h2></h2><p></p></div><div><p></p></div></div><div><div>bgcolor</div><div></div></div><div><div>text-color</div><div></div></div><div><div>columns</div><div>2</div></div><div><div>cta-button-color</div><div></div></div><div><div>cta-text-color</div><div></div></div></div>"
+            }
+          }
+        },
+        {
           "title": "Carousel",
           "id": "carousel",
           "model": "carousel",
