@@ -185,26 +185,7 @@
     ]
   },
   {
-    "id": "account-dashboard-jg",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Dashboard Title",
-        "valueType": "string",
-        "value": "My Account Dashboard"
-      },
-      {
-        "component": "text",
-        "name": "recent-orders-count",
-        "label": "Recent Orders / POs to Display (default: 5)",
-        "valueType": "string",
-        "value": "5"
-      }
-    ]
-  },
-  {
-    "id": "age-gate-v2",
+    "id": "age-gate-jg",
     "fields": [
       {
         "component": "text",
@@ -309,32 +290,6 @@
         "name": "text-color",
         "label": "Text Color",
         "value": ""
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -697,60 +652,6 @@
         "component": "text",
         "name": "cta-button-opacity",
         "label": "CTA Button Opacity % (0-100, default 24)",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "hero-v2",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "subtitle",
-        "label": "Subtitle",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "description",
-        "label": "Description",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "ctaLabel",
-        "label": "CTA Label",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "ctaUrl",
-        "label": "CTA URL",
         "valueType": "string",
         "value": ""
       }
