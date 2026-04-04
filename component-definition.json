@@ -170,12 +170,12 @@
           }
         },
         {
-          "title": "Promotional Hero (JPG)",
-          "id": "promotional-hero-jg",
-          "model": "promotional-hero-jg",
+          "title": "Promotional Hero V2",
+          "id": "promotional-hero-v2",
+          "model": "promotional-hero-v2",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"promotional-hero-jg\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div><h2></h2><p></p></div><div><p></p></div></div><div><div>bgcolor</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div><div><div>columns</div><div>3</div></div><div><div>cta-button-color</div><div>#ff6b00</div></div><div><div>cta-text-color</div><div>#ffffff</div></div></div>",
+              "unsafeHTML": "<div class=\"promotional-hero-v2\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div><h2></h2><p></p></div><div><p></p></div></div><div><div>bgcolor</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div><div><div>columns</div><div>3</div></div><div><div>cta-button-color</div><div>#ff6b00</div></div><div><div>cta-text-color</div><div>#ffffff</div></div></div>",
               "fields": [
                 {
                   "name": "bgcolor",
