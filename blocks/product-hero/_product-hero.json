@@ -6,15 +6,14 @@
       "model": "product-hero",
       "plugins": {
         "da": {
-          "rows": 1,
+          "rows": 2,
           "columns": 2,
           "fields": [
-            { "name": "image", "selector": "div>div:nth-child(1)>picture>img[src]" },
-            { "name": "alt", "selector": "div>div:nth-child(1)>picture>img[alt]" },
-            { "name": "name", "selector": "div>div:nth-child(2)>h2" },
-            { "name": "description", "selector": "div>div:nth-child(2)>p:first-of-type" },
-            { "name": "cta-text", "selector": "div>div:nth-child(2)>p:last-of-type>a" },
-            { "name": "cta-href", "selector": "div>div:nth-child(2)>p:last-of-type>a[href]" }
+            { "name": "sku", "selector": "div:nth-child(1)>div:nth-child(2)" },
+            { "name": "image", "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[src]" },
+            { "name": "alt", "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[alt]" },
+            { "name": "cta-text", "selector": "div:nth-child(2)>div:nth-child(2)>p>a" },
+            { "name": "cta-href", "selector": "div:nth-child(2)>div:nth-child(2)>p>a[href]" }
           ]
         }
       }
@@ -25,15 +24,14 @@
       "model": "product-hero",
       "plugins": {
         "da": {
-          "rows": 1,
+          "rows": 2,
           "columns": 2,
           "fields": [
-            { "name": "image", "selector": "div>div:nth-child(1)>picture>img[src]" },
-            { "name": "alt", "selector": "div>div:nth-child(1)>picture>img[alt]" },
-            { "name": "name", "selector": "div>div:nth-child(2)>h2" },
-            { "name": "description", "selector": "div>div:nth-child(2)>p:first-of-type" },
-            { "name": "cta-text", "selector": "div>div:nth-child(2)>p:last-of-type>a" },
-            { "name": "cta-href", "selector": "div>div:nth-child(2)>p:last-of-type>a[href]" }
+            { "name": "sku", "selector": "div:nth-child(1)>div:nth-child(2)" },
+            { "name": "image", "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[src]" },
+            { "name": "alt", "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[alt]" },
+            { "name": "cta-text", "selector": "div:nth-child(2)>div:nth-child(2)>p>a" },
+            { "name": "cta-href", "selector": "div:nth-child(2)>div:nth-child(2)>p>a[href]" }
           ]
         }
       }
@@ -43,6 +41,14 @@
     {
       "id": "product-hero",
       "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "sku",
+          "label": "Product SKU",
+          "value": "",
+          "description": "SKU used to fetch name, price, and description from the catalog. Not displayed on the page."
+        },
         {
           "component": "reference",
           "valueType": "string",
@@ -56,22 +62,6 @@
           "name": "alt",
           "label": "Image Alt Text",
           "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "name",
-          "label": "Product Name",
-          "value": "",
-          "description": "Displayed as the main heading"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "description",
-          "label": "Short Description",
-          "value": "",
-          "description": "Brief product summary shown below the name"
         },
         {
           "component": "text",

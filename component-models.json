@@ -1199,6 +1199,14 @@
     "id": "product-hero",
     "fields": [
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "sku",
+        "label": "Product SKU",
+        "value": "",
+        "description": "SKU used to fetch name, price, and description from the catalog. Not displayed on the page."
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -1211,22 +1219,6 @@
         "name": "alt",
         "label": "Image Alt Text",
         "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "name",
-        "label": "Product Name",
-        "value": "",
-        "description": "Displayed as the main heading"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "description",
-        "label": "Short Description",
-        "value": "",
-        "description": "Brief product summary shown below the name"
       },
       {
         "component": "text",

@@ -617,32 +617,28 @@
           "model": "product-hero",
           "plugins": {
             "da": {
-              "rows": 1,
+              "rows": 2,
               "columns": 2,
               "fields": [
                 {
+                  "name": "sku",
+                  "selector": "div:nth-child(1)>div:nth-child(2)"
+                },
+                {
                   "name": "image",
-                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[src]"
                 },
                 {
                   "name": "alt",
-                  "selector": "div>div:nth-child(1)>picture>img[alt]"
-                },
-                {
-                  "name": "name",
-                  "selector": "div>div:nth-child(2)>h2"
-                },
-                {
-                  "name": "description",
-                  "selector": "div>div:nth-child(2)>p:first-of-type"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[alt]"
                 },
                 {
                   "name": "cta-text",
-                  "selector": "div>div:nth-child(2)>p:last-of-type>a"
+                  "selector": "div:nth-child(2)>div:nth-child(2)>p>a"
                 },
                 {
                   "name": "cta-href",
-                  "selector": "div>div:nth-child(2)>p:last-of-type>a[href]"
+                  "selector": "div:nth-child(2)>div:nth-child(2)>p>a[href]"
                 }
               ]
             }
@@ -654,32 +650,28 @@
           "model": "product-hero",
           "plugins": {
             "da": {
-              "rows": 1,
+              "rows": 2,
               "columns": 2,
               "fields": [
                 {
+                  "name": "sku",
+                  "selector": "div:nth-child(1)>div:nth-child(2)"
+                },
+                {
                   "name": "image",
-                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[src]"
                 },
                 {
                   "name": "alt",
-                  "selector": "div>div:nth-child(1)>picture>img[alt]"
-                },
-                {
-                  "name": "name",
-                  "selector": "div>div:nth-child(2)>h2"
-                },
-                {
-                  "name": "description",
-                  "selector": "div>div:nth-child(2)>p:first-of-type"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>picture>img[alt]"
                 },
                 {
                   "name": "cta-text",
-                  "selector": "div>div:nth-child(2)>p:last-of-type>a"
+                  "selector": "div:nth-child(2)>div:nth-child(2)>p>a"
                 },
                 {
                   "name": "cta-href",
-                  "selector": "div>div:nth-child(2)>p:last-of-type>a[href]"
+                  "selector": "div:nth-child(2)>div:nth-child(2)>p>a[href]"
                 }
               ]
             }
