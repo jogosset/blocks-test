@@ -54,6 +54,9 @@
           "...": "../blocks/company-myaccount-banner/_*.json#/definitions"
         },
         {
+          "...": "../blocks/age-gate-jg/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/hero/_*.json#/definitions"
         },
         {

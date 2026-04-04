@@ -128,6 +128,7 @@
     {
       "id": "section",
       "components": [
+        "age-gate-jg",
         "hero",
         "hero-jg",
         "accordion",

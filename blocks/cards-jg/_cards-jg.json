@@ -54,6 +54,10 @@
   ],
   "models": [
     {
+      "id": "cards-jg",
+      "fields": []
+    },
+    {
       "id": "card-jg",
       "fields": [
         {

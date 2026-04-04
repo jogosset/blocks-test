@@ -164,6 +164,10 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": []
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {
@@ -247,6 +251,10 @@
     "fields": []
   },
   {
+    "id": "cards-jg",
+    "fields": []
+  },
+  {
     "id": "card-jg",
     "fields": [
       {
@@ -292,6 +300,10 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "carousel",
+    "fields": []
   },
   {
     "id": "carousel-item",
@@ -410,6 +422,14 @@
     ]
   },
   {
+    "id": "columns-row",
+    "fields": []
+  },
+  {
+    "id": "columns-cell",
+    "fields": []
+  },
+  {
     "id": "commerce-account-header",
     "fields": [
       {
@@ -418,6 +438,10 @@
         "label": "Title"
       }
     ]
+  },
+  {
+    "id": "commerce-account-sidebar",
+    "fields": []
   },
   {
     "id": "commerce-addresses",
@@ -485,6 +509,50 @@
     ]
   },
   {
+    "id": "commerce-checkout-success",
+    "fields": []
+  },
+  {
+    "id": "commerce-checkout",
+    "fields": []
+  },
+  {
+    "id": "commerce-confirm-account",
+    "fields": []
+  },
+  {
+    "id": "commerce-create-account",
+    "fields": []
+  },
+  {
+    "id": "commerce-create-password",
+    "fields": []
+  },
+  {
+    "id": "commerce-create-return",
+    "fields": []
+  },
+  {
+    "id": "commerce-customer-details",
+    "fields": []
+  },
+  {
+    "id": "commerce-customer-information",
+    "fields": []
+  },
+  {
+    "id": "commerce-forgot-password",
+    "fields": []
+  },
+  {
+    "id": "commerce-gift-options",
+    "fields": []
+  },
+  {
+    "id": "commerce-login",
+    "fields": []
+  },
+  {
     "id": "commerce-mini-cart",
     "fields": [
       {
@@ -515,6 +583,26 @@
     ]
   },
   {
+    "id": "commerce-order-cost-summary",
+    "fields": []
+  },
+  {
+    "id": "commerce-order-header",
+    "fields": []
+  },
+  {
+    "id": "commerce-order-product-list",
+    "fields": []
+  },
+  {
+    "id": "commerce-order-returns",
+    "fields": []
+  },
+  {
+    "id": "commerce-order-status",
+    "fields": []
+  },
+  {
     "id": "commerce-orders-list",
     "fields": [
       {
@@ -525,6 +613,10 @@
     ]
   },
   {
+    "id": "commerce-return-header",
+    "fields": []
+  },
+  {
     "id": "commerce-returns-list",
     "fields": [
       {
@@ -533,6 +625,14 @@
         "label": "Minified View"
       }
     ]
+  },
+  {
+    "id": "commerce-search-order",
+    "fields": []
+  },
+  {
+    "id": "commerce-shipping-status",
+    "fields": []
   },
   {
     "id": "commerce-wishlist",

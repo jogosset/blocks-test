@@ -304,6 +304,16 @@
           }
         },
         {
+          "title": "Age Gate (JPG)",
+          "id": "age-gate-jg",
+          "model": "age-gate-jg",
+          "plugins": {
+            "da": {
+              "type": "key-value-block"
+            }
+          }
+        },
+        {
           "title": "Hero",
           "id": "hero",
           "model": "hero",
