@@ -2,7 +2,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 const DEFAULTS = {
   align: 'center',
-  columns: '2',
+  columns: '3',
   cardWidth: 'medium',
   cardHeight: 'auto',
   imageRatio: 'portrait',
