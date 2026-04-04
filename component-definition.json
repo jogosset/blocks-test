@@ -120,6 +120,56 @@
           }
         },
         {
+          "title": "Cards (JPG)",
+          "id": "cards-jg",
+          "filter": "cards-jg",
+          "plugins": {
+            "da": {
+              "name": "cards-jg",
+              "rows": 1,
+              "columns": 5
+            }
+          }
+        },
+        {
+          "title": "Card (JPG)",
+          "id": "card-jg",
+          "model": "card-jg",
+          "plugins": {
+            "da": {
+              "name": "card-jg",
+              "rows": 1,
+              "columns": 5,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(2)"
+                },
+                {
+                  "name": "body",
+                  "selector": "div:nth-child(3)"
+                },
+                {
+                  "name": "background-color",
+                  "selector": "div:nth-child(4)"
+                },
+                {
+                  "name": "text-color",
+                  "selector": "div:nth-child(5)"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Carousel",
           "id": "carousel",
           "model": "carousel",

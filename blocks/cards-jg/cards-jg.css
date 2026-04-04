@@ -31,18 +31,21 @@
   margin: var(--spacing-small);
 }
 
-.cards-jg .cards-jg-title {
-  font-size: 1.25rem;
+.cards-jg h3.cards-jg-title {
+  font-size: 1.6rem;
   font-weight: 700;
+  line-height: 1.4;
   margin: 0 0 8px;
   color: inherit;
 }
 
 .cards-jg .cards-jg-body-text {
+  font-size: 1.6rem;
   color: inherit;
 }
 
 .cards-jg .cards-jg-body-text p {
+  font-size: 1.6rem;
   margin: 0 0 8px;
 }
 
