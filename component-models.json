@@ -564,12 +564,13 @@
         "description": "Any valid CSS color for all text in the banner"
       },
       {
-        "component": "aem-content",
+        "component": "reference",
         "valueType": "string",
         "name": "logo",
         "label": "Logo Image",
         "multi": false,
-        "description": "Select a logo from the DA media library. Banner height follows the image height."
+        "rootPath": "https://author-p158081-e1683323.adobeaemcloud.com/content/dam",
+        "description": "Select a logo from the AEM Assets repository. Banner height follows the image height."
       },
       {
         "component": "text",
