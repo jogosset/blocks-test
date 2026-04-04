@@ -1322,7 +1322,7 @@
     ]
   },
   {
-    "id": "product-teaser-jg",
+    "id": "product-teaser-v2",
     "fields": [
       {
         "component": "text",
@@ -1360,7 +1360,7 @@
         "name": "text-color",
         "label": "Text Color",
         "value": "#ffffff",
-        "description": "Any valid CSS color for the product name, price, and description"
+        "description": "Any valid CSS color for the product name, SKU, price, and description"
       }
     ]
   },

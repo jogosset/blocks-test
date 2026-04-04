@@ -669,12 +669,12 @@
           }
         },
         {
-          "title": "Product Teaser (JPG)",
-          "id": "product-teaser-jg",
-          "model": "product-teaser-jg",
+          "title": "Product Teaser V2",
+          "id": "product-teaser-v2",
+          "model": "product-teaser-v2",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"product-teaser-jg\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>false</div></div><div><div>cart-button</div><div>false</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div></div>",
+              "unsafeHTML": "<div class=\"product-teaser-v2\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>false</div></div><div><div>cart-button</div><div>false</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div></div>",
               "fields": [
                 {
                   "name": "sku",
