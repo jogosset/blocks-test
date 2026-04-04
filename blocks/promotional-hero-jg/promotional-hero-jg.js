@@ -391,6 +391,15 @@ export default function decorate(block) {
       } else if (key === 'cta-text-color' && value) {
         block.dataset.promoherojgBtntext = value;
         row.remove();
+      } else if (key === 'bgcolor' && value) {
+        block.dataset.promoherojgBgcolor = value;
+        row.remove();
+      } else if (key === 'text-color' && value) {
+        block.dataset.promoherojgContenttext = value;
+        row.remove();
+      } else if (key === 'columns' && value) {
+        block.dataset.promoherojgColumns = value;
+        row.remove();
       }
     }
   });
