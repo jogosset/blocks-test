@@ -1326,31 +1326,41 @@
     "fields": [
       {
         "component": "text",
+        "valueType": "string",
         "name": "sku",
         "label": "Product SKU",
+        "description": "The SKU of the product to display",
         "required": true
       },
       {
         "component": "boolean",
         "name": "details-button",
         "label": "Show Details Button",
-        "valueType": "boolean"
+        "valueType": "boolean",
+        "value": false
       },
       {
         "component": "boolean",
         "name": "cart-button",
         "label": "Show Add to Cart Button",
-        "valueType": "boolean"
+        "valueType": "boolean",
+        "value": false
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "background-color",
-        "label": "Card Background Color (e.g. #ffffff or red)"
+        "label": "Background Color",
+        "value": "#003087",
+        "description": "Any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "text-color",
-        "label": "Card Text Color (e.g. #000000 or black)"
+        "label": "Text Color",
+        "value": "#ffffff",
+        "description": "Any valid CSS color for the product name, price, and description"
       }
     ]
   },
