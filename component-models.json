@@ -545,6 +545,49 @@
     ]
   },
   {
+    "id": "company-myaccount-banner",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgcolor",
+        "label": "Background Color",
+        "value": "#f5f5f5",
+        "description": "Any valid CSS color (e.g. #003087, white, rgb(0,48,135))"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text-color",
+        "label": "Text Color",
+        "value": "#2b2b2b",
+        "description": "Any valid CSS color for all text in the banner"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo Image",
+        "multi": false,
+        "description": "Select a logo from the Assets repository. Banner height follows the image height."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "logo-alt",
+        "label": "Logo Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Banner Text",
+        "description": "Freeform rich text — supports bold, italic, alignment, headings, and links"
+      }
+    ]
+  },
+  {
     "id": "enrichment",
     "fields": [
       {

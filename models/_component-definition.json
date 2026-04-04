@@ -51,6 +51,9 @@
           "...": "../blocks/fragment/_*.json#/definitions"
         },
         {
+          "...": "../blocks/company-myaccount-banner/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/hero/_*.json#/definitions"
         },
         {
