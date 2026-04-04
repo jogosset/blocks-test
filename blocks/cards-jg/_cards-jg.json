@@ -3,6 +3,7 @@
     {
       "title": "Cards (JPG)",
       "id": "cards-jg",
+      "model": "cards-jg",
       "filter": "cards-jg",
       "plugins": {
         "da": {

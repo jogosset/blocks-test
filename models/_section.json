@@ -129,6 +129,7 @@
       "id": "section",
       "components": [
         "hero",
+        "hero-jg",
         "accordion",
         "cards-jg",
         "company-myaccount-banner",
