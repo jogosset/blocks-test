@@ -6,7 +6,7 @@
       "model": "company-myaccount-banner",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"company-myaccount-banner\"><div><div>bgcolor</div><div>#f5f5f5</div></div><div><div>text-color</div><div>#2b2b2b</div></div><div><div></div><div><p>Enter your banner text here</p></div></div></div>",
+          "unsafeHTML": "<div class=\"company-myaccount-banner\"><div><div>bgcolor</div><div>#f5f5f5</div></div><div><div>text-color</div><div>#2b2b2b</div></div><div><div><p>Logo image here</p></div><div><p>Enter your banner text here</p></div></div></div>",
           "fields": [
             {
               "name": "bgcolor",
@@ -23,6 +23,10 @@
             {
               "name": "logo-alt",
               "selector": "div:nth-child(3)>div:nth-child(1)>picture>img[alt]"
+            },
+            {
+              "name": "content",
+              "selector": "div:nth-child(3)>div:nth-child(2)"
             }
           ]
         }
@@ -50,12 +54,12 @@
           "description": "Any valid CSS color for all text in the banner"
         },
         {
-          "component": "reference",
+          "component": "aem-content",
           "valueType": "string",
           "name": "logo",
           "label": "Logo Image",
           "multi": false,
-          "description": "Select a logo from the Assets repository. Banner height follows the image height."
+          "description": "Select a logo from the DA media library. Banner height follows the image height."
         },
         {
           "component": "text",
