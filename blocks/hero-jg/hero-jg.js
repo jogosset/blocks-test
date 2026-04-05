@@ -21,10 +21,11 @@ export default function decorate(block) {
     block.style.setProperty('--hero-jg-text-color', config['text-color']);
   }
 
-  // Apply CTA button background opacity (0–100, default 24)
+  // Apply CTA button background opacity (0–100 → stored as 0–1 decimal for rgba())
   if (config['cta-button-opacity'] !== undefined && config['cta-button-opacity'] !== '') {
-    const opacity = Math.min(100, Math.max(0, parseFloat(config['cta-button-opacity']) || 24));
-    block.style.setProperty('--hero-jg-cta-opacity', `${opacity}%`);
+    const pct = parseFloat(config['cta-button-opacity']);
+    const opacity = Number.isNaN(pct) ? 0.24 : Math.min(1, Math.max(0, pct / 100));
+    block.style.setProperty('--hero-jg-cta-opacity', opacity);
   }
 
   const contentCell = block.querySelector('div:nth-child(1)>div:nth-child(1)');
