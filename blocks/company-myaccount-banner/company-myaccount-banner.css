@@ -100,7 +100,7 @@ main .company-myaccount-banner .cmab-text em {
    Tablet and up
    ============================================================ */
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   main .company-myaccount-banner {
     padding-inline: var(--spacing-big);
     gap: var(--spacing-big);
@@ -111,7 +111,7 @@ main .company-myaccount-banner .cmab-text em {
    Desktop and up
    ============================================================ */
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   main .company-myaccount-banner {
     padding-inline: var(--spacing-large);
     gap: var(--spacing-xbig);

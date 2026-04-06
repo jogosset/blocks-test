@@ -111,7 +111,9 @@ export default async function decorate(block) {
     const product = data?.products?.[0];
     if (!product) return;
 
-    const { name, shortDescription, price, priceRange } = product;
+    const {
+      name, shortDescription, price, priceRange,
+    } = product;
 
     if (name) nameEl.textContent = name;
 

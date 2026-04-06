@@ -126,7 +126,7 @@ main .product-hero[data-theme="dark"] .ph-cta .button.primary:hover {
    Tablet and up
    ============================================================ */
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   main .product-hero {
     padding-inline: var(--spacing-big);
   }
@@ -136,7 +136,7 @@ main .product-hero[data-theme="dark"] .ph-cta .button.primary:hover {
    Desktop and up — side-by-side layout
    ============================================================ */
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   main .product-hero {
     flex-direction: row;
     align-items: center;

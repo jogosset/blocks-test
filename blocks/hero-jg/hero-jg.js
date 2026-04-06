@@ -21,12 +21,11 @@ export default function decorate(block) {
     block.style.setProperty('--hero-jg-text-color', config['text-color']);
   }
 
-  // Apply CTA button background opacity (0–100 → stored as 0–1 decimal for rgba())
-  if (config['cta-button-opacity'] !== undefined && config['cta-button-opacity'] !== '') {
-    const pct = parseFloat(config['cta-button-opacity']);
-    const opacity = Number.isNaN(pct) ? 0.24 : Math.min(1, Math.max(0, pct / 100));
-    block.style.setProperty('--hero-jg-cta-opacity', opacity);
-  }
+  // Apply CTA button background — compute full rgba() in JS so CSS never needs
+  // to substitute a custom property into rgba(), which is unreliable cross-browser.
+  const pct = parseFloat(config['cta-button-opacity']);
+  const opacity = Number.isNaN(pct) ? 0.24 : Math.min(1, Math.max(0, pct / 100));
+  block.style.setProperty('--hero-jg-cta-bg', `rgba(255, 255, 255, ${opacity})`);
 
   const contentCell = block.querySelector('div:nth-child(1)>div:nth-child(1)');
   if (!contentCell) return;
