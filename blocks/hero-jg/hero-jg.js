@@ -66,4 +66,11 @@ export default function decorate(block) {
     }
   });
   block.replaceChildren(heromain);
+
+  // Apply CTA background directly on the button element so it always wins
+  // over global EDS button styles regardless of CSS load order or specificity.
+  const ctaBg = `rgba(255, 255, 255, ${opacity})`;
+  block.querySelectorAll('a.button, .hero-jg-body a, .hero-jg-image a').forEach((btn) => {
+    btn.style.setProperty('background-color', ctaBg);
+  });
 }

@@ -4,6 +4,12 @@
  *
  * Tests the opacity computation logic extracted from decorate() so it
  * can be verified without a browser DOM.
+ *
+ * Fix history:
+ *  v1 - replaced color-mix() with rgba() (browser support)
+ *  v2 - fixed NaN||24 so opacity:0 works
+ *  v3 - apply background-color as inline style on button element directly
+ *       so EDS global button styles cannot override it
  */
 
 /* eslint-disable no-console */
@@ -88,6 +94,16 @@ test('output is always a complete rgba() string (no var() calls)', () => {
   const result = computeCtaBg('50');
   assert.ok(!result.includes('var('), 'should not contain var()');
   assert.ok(result.startsWith('rgba('), 'should start with rgba(');
+});
+
+test('output can be applied as an inline style background-color', () => {
+  // Simulates: btn.style.setProperty('background-color', ctaBg)
+  // Inline styles always win over class-based rules — this is the mechanism
+  // that ensures EDS global button styles cannot override the authored opacity.
+  const result = computeCtaBg('75');
+  assert.equal(result, 'rgba(255, 255, 255, 0.75)');
+  // A real browser would accept this as a valid inline background-color value
+  assert.ok(result.match(/^rgba\(255, 255, 255, [01](\.\d+)?\)$/), 'valid rgba() format');
 });
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
