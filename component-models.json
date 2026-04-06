@@ -741,8 +741,7 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false,
-        "rootPath": "https://author-p158081-e1683323.adobeaemcloud.com/content/dam"
+        "multi": false
       },
       {
         "component": "text",

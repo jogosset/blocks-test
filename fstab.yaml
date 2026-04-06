@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/jogosset/jpg-b2b-accs/
+    url: https://content.da.live/jogosset/blocks-test/
     type: markup

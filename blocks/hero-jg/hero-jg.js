@@ -25,40 +25,39 @@ export default function decorate(block) {
   // to substitute a custom property into rgba(), which is unreliable cross-browser.
   const pct = parseFloat(config['cta-button-opacity']);
   const opacity = Number.isNaN(pct) ? 0.24 : Math.min(1, Math.max(0, pct / 100));
-  block.style.setProperty('--hero-jg-cta-bg', `rgba(255, 255, 255, ${opacity})`);
+  const ctaBg = `rgba(255, 255, 255, ${opacity})`;
+  block.style.setProperty('--hero-jg-cta-bg', ctaBg);
 
   const contentCell = block.querySelector('div:nth-child(1)>div:nth-child(1)');
   if (!contentCell) return;
 
+  // Build a single hero-jg-main > hero-jg-content > (hero-jg-image + hero-jg-body)
+  // structure. Anything containing a <picture> goes to heroimage; everything
+  // else (headings, paragraphs, CTA link) goes to herobody. This keeps all
+  // content together and makes the CTA link reliably targetable afterwards.
   const heromain = document.createElement('div');
   heromain.className = 'hero-jg-main';
+  const herocontent = document.createElement('div');
+  herocontent.className = 'hero-jg-content';
+  const heroimage = document.createElement('div');
+  heroimage.className = 'hero-jg-image';
+  const herobody = document.createElement('div');
+  herobody.className = 'hero-jg-body';
 
-  [...contentCell.children].forEach((row) => {
-    const herocontent = document.createElement('div');
-    herocontent.className = 'hero-jg-content';
-
-    const heroimage = document.createElement('div');
-    heroimage.className = 'hero-jg-image';
-    const herobody = document.createElement('div');
-    herobody.className = 'hero-jg-body';
-
-    // Move each child to either heroimage (if picture) or herobody (otherwise)
-    while (row.firstElementChild) {
-      const child = row.firstElementChild;
-      if (child.querySelector && child.querySelector('picture')) {
-        heroimage.append(child);
-      } else {
-        herobody.append(child);
-      }
+  [...contentCell.children].forEach((child) => {
+    if (child.tagName === 'PICTURE' || child.querySelector?.('picture')) {
+      heroimage.append(child);
+    } else {
+      herobody.append(child);
     }
-
-    herocontent.append(heroimage);
-    herocontent.append(herobody);
-    heromain.append(herocontent);
   });
 
+  herocontent.append(heroimage);
+  herocontent.append(herobody);
+  heromain.append(herocontent);
+
   // Optimize all images
-  heromain.querySelectorAll('picture > img').forEach((img) => {
+  heroimage.querySelectorAll('picture > img').forEach((img) => {
     const src = img.getAttribute('src') || img.src;
     const alt = img.getAttribute('alt') || '';
     if (src) {
@@ -67,10 +66,14 @@ export default function decorate(block) {
   });
   block.replaceChildren(heromain);
 
-  // Apply CTA background directly on the button element so it always wins
-  // over global EDS button styles regardless of CSS load order or specificity.
-  const ctaBg = `rgba(255, 255, 255, ${opacity})`;
-  block.querySelectorAll('a.button, .hero-jg-body a, .hero-jg-image a').forEach((btn) => {
-    btn.style.setProperty('background-color', ctaBg);
+  // Apply CTA background directly on the button element(s) as an inline
+  // !important so it always wins over global EDS button styles regardless
+  // of CSS load order, specificity, or late-arriving stylesheets.
+  const ctaLinks = block.querySelectorAll('.hero-jg-body a, .hero-jg-image a, a.button');
+  ctaLinks.forEach((btn) => {
+    btn.style.setProperty('background-color', ctaBg, 'important');
+    if (config['text-color']) {
+      btn.style.setProperty('color', config['text-color'], 'important');
+    }
   });
 }
