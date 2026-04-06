@@ -344,8 +344,7 @@
           "model": "hero-jg",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 1,
+              "unsafeHTML": "<div class=\"hero-jg\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\" alt=\"\"></picture><h2>Hero Title</h2><h3>Hero Subtitle</h3><p>Hero description text</p><p><a href=\"\">Shop Now</a></p></div></div><div><div>text-color</div><div>#ffffff</div></div><div><div>cta-button-opacity</div><div>24</div></div></div>",
               "fields": [
                 {
                   "name": "image",
