@@ -12,7 +12,6 @@ const productTeaserJgQuery = `query productTeaserJg($sku: String!) {
     externalId
     addToCartAllowed
     shortDescription
-    description
     __typename
     images(roles: []) {
       label
@@ -127,7 +126,7 @@ function renderImage(product, size = 250) {
 function renderProduct(product, config, block) {
   const {
     name, urlKey, sku, price, priceRange, addToCartAllowed, __typename,
-    shortDescription, description,
+    shortDescription,
   } = product;
 
   const currency = price?.final?.amount?.currency || priceRange?.minimum?.final?.amount?.currency;
@@ -147,10 +146,8 @@ function renderProduct(product, config, block) {
     }
   }
 
-  // Prefer the full description if present, fall back to shortDescription.
-  const descriptionHtml = description || shortDescription || '';
-  const descHtml = descriptionHtml
-    ? `<div class="description">${descriptionHtml}</div>`
+  const descHtml = shortDescription
+    ? `<div class="description">${shortDescription}</div>`
     : '';
 
   const fragment = document.createRange().createContextualFragment(`
@@ -198,6 +195,12 @@ export default async function decorate(block) {
   }
   if (config['text-color']) {
     block.style.setProperty('--ptjg-text-color', config['text-color']);
+  }
+  if (config['button-color']) {
+    block.style.setProperty('--ptjg-button-bg-color', config['button-color']);
+  }
+  if (config['button-text-color']) {
+    block.style.setProperty('--ptjg-button-text-color', config['button-text-color']);
   }
 
   renderPlaceholder(config, block);

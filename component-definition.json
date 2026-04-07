@@ -794,7 +794,7 @@
           "model": "product-teaser-jg",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"product-teaser-jg\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>true</div></div><div><div>cart-button</div><div>true</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div></div>",
+              "unsafeHTML": "<div class=\"product-teaser-jg\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>true</div></div><div><div>cart-button</div><div>true</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div><div><div>button-color</div><div>#ffffff</div></div><div><div>button-text-color</div><div>#003087</div></div></div>",
               "fields": [
                 {
                   "name": "sku",
@@ -815,6 +815,14 @@
                 {
                   "name": "text-color",
                   "selector": "div:nth-child(5)>div:nth-child(2)"
+                },
+                {
+                  "name": "button-color",
+                  "selector": "div:nth-child(6)>div:nth-child(2)"
+                },
+                {
+                  "name": "button-text-color",
+                  "selector": "div:nth-child(7)>div:nth-child(2)"
                 }
               ]
             }

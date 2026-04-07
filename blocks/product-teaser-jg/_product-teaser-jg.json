@@ -6,7 +6,7 @@
       "model": "product-teaser-jg",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"product-teaser-jg\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>true</div></div><div><div>cart-button</div><div>true</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div></div>",
+          "unsafeHTML": "<div class=\"product-teaser-jg\"><div><div>sku</div><div></div></div><div><div>details-button</div><div>true</div></div><div><div>cart-button</div><div>true</div></div><div><div>background-color</div><div>#003087</div></div><div><div>text-color</div><div>#ffffff</div></div><div><div>button-color</div><div>#ffffff</div></div><div><div>button-text-color</div><div>#003087</div></div></div>",
           "fields": [
             {
               "name": "sku",
@@ -27,6 +27,14 @@
             {
               "name": "text-color",
               "selector": "div:nth-child(5)>div:nth-child(2)"
+            },
+            {
+              "name": "button-color",
+              "selector": "div:nth-child(6)>div:nth-child(2)"
+            },
+            {
+              "name": "button-text-color",
+              "selector": "div:nth-child(7)>div:nth-child(2)"
             }
           ]
         }
@@ -65,7 +73,7 @@
           "name": "background-color",
           "label": "Background Color",
           "value": "#003087",
-          "description": "Any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
+          "description": "Card background — any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
         },
         {
           "component": "text",
@@ -73,7 +81,23 @@
           "name": "text-color",
           "label": "Text Color",
           "value": "#ffffff",
-          "description": "Any valid CSS color for the product name, SKU, price, and description"
+          "description": "Text color for product name, SKU, price, and description"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "button-color",
+          "label": "Details Button Background Color",
+          "value": "#ffffff",
+          "description": "Background color of the Details button (default: same as text-color)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "button-text-color",
+          "label": "Details Button Text Color",
+          "value": "#003087",
+          "description": "Text color of the Details button (default: same as background-color)"
         }
       ]
     }
