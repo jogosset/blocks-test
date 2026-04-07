@@ -15,6 +15,29 @@
   border: var(--shape-border-width-1) solid var(--color-neutral-500);
   background-color: var(--background-color);
   overflow: hidden;
+  transform: scale(1);
+  transform-origin: center center;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+}
+
+.cards-jg > ul > li:hover,
+.cards-jg > ul > li:focus-within {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 18%), 0 4px 10px rgb(0 0 0 / 10%);
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-jg > ul > li {
+    transition: none;
+  }
+
+  .cards-jg > ul > li:hover,
+  .cards-jg > ul > li:focus-within {
+    transform: none;
+  }
 }
 
 .cards-jg .cards-jg-image {
