@@ -14,11 +14,12 @@
 .cards-jg {
   --cards-jg-transition-duration: 0.3s;
   --cards-jg-image-shadow: 0 4px 20px rgb(0 0 0 / 10%);
-  --cards-jg-image-shadow-hover: 0 12px 40px rgb(0 0 0 / 20%);
-  --cards-jg-image-hover-scale: 1.04;
+  --cards-jg-image-shadow-hover: 0 16px 48px rgb(0 0 0 / 30%);
+  --cards-jg-image-hover-scale: 1.08;
   --cards-jg-body-shadow: none;
-  --cards-jg-body-shadow-hover: 0 8px 30px rgb(0 0 0 / 20%);
-  --cards-jg-body-hover-translate-y: -4px;
+  --cards-jg-body-shadow-hover: 0 12px 36px rgb(0 0 0 / 25%);
+  --cards-jg-body-hover-translate-y: -8px;
+  --cards-jg-card-hover-translate-y: -6px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26,6 +27,7 @@
     --cards-jg-transition-duration: 0s;
     --cards-jg-image-hover-scale: 1;
     --cards-jg-body-hover-translate-y: 0;
+    --cards-jg-card-hover-translate-y: 0;
   }
 }
 
@@ -34,6 +36,8 @@
   background-color: var(--background-color);
   overflow: visible;
   position: relative;
+  transform: translateY(0);
+  transition: transform var(--cards-jg-transition-duration) ease;
 }
 
 .cards-jg .cards-jg-image {
@@ -61,6 +65,7 @@
 .cards-jg > ul > li:hover,
 .cards-jg > ul > li:focus-within {
   z-index: 1;
+  transform: translateY(var(--cards-jg-card-hover-translate-y));
 }
 
 .cards-jg > ul > li:hover .cards-jg-image,
