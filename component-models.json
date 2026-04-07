@@ -1438,7 +1438,7 @@
         "name": "background-color",
         "label": "Background Color",
         "value": "#003087",
-        "description": "Any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
+        "description": "Card background — any valid CSS color (e.g. #003087, blue, rgb(0,48,135))"
       },
       {
         "component": "text",
@@ -1446,7 +1446,23 @@
         "name": "text-color",
         "label": "Text Color",
         "value": "#ffffff",
-        "description": "Any valid CSS color for the product name, SKU, price, and description"
+        "description": "Text color for product name, SKU, price, and description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button-color",
+        "label": "Details Button Background Color",
+        "value": "#ffffff",
+        "description": "Background color of the Details button (default: same as text-color)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button-text-color",
+        "label": "Details Button Text Color",
+        "value": "#003087",
+        "description": "Text color of the Details button (default: same as background-color)"
       }
     ]
   },
