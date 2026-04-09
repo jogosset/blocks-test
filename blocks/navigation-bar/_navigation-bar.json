@@ -1,0 +1,139 @@
+{
+  "definitions": [
+    {
+      "title": "Navigation Bar",
+      "id": "navigation-bar",
+      "model": "navigation-bar",
+      "filter": "navigation-bar",
+      "plugins": {
+        "da": {
+          "title": "Navigation Bar",
+          "rows": 5,
+          "columns": 2
+        }
+      }
+    },
+    {
+      "title": "Nav Item",
+      "id": "navigation-bar-item",
+      "model": "navigation-bar-item",
+      "plugins": {
+        "da": {
+          "title": "Nav Item",
+          "rows": 1,
+          "columns": 2,
+          "fields": [
+            {
+              "name": "categoryName",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "subLinks",
+              "selector": "div:nth-child(2)"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "navigation-bar",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "description": "Background color for the navigation bar (hex, e.g. #1b1f3e)",
+          "value": "#1b1f3e"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "textColor",
+          "label": "Text Color",
+          "description": "Text color for navigation items (hex, e.g. #ffffff)",
+          "value": "#ffffff"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "hoverAccentColor",
+          "label": "Hover Accent Color",
+          "description": "Color for the hover underline accent (hex, e.g. #3b82f6)",
+          "value": "#3b82f6"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "breadcrumb",
+          "label": "Breadcrumb",
+          "description": "Optional breadcrumb trail with links separated by >. Example: Home > Category > Subcategory > Page"
+        }
+      ]
+    },
+    {
+      "id": "navigation-bar-item",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "categoryName",
+          "label": "Category Name",
+          "description": "Top-level navigation label (e.g. Aviation Parts)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink1Label",
+          "label": "Sub-Link 1 Label",
+          "description": "Label for the first sub-navigation link"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink1Url",
+          "label": "Sub-Link 1 URL",
+          "description": "URL path for the first sub-navigation link (e.g. /plp/tires)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink2Label",
+          "label": "Sub-Link 2 Label",
+          "description": "Label for the second sub-navigation link (optional)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink2Url",
+          "label": "Sub-Link 2 URL",
+          "description": "URL path for the second sub-navigation link"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink3Label",
+          "label": "Sub-Link 3 Label",
+          "description": "Label for the third sub-navigation link (optional)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subLink3Url",
+          "label": "Sub-Link 3 URL",
+          "description": "URL path for the third sub-navigation link"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "navigation-bar",
+      "components": [
+        "navigation-bar-item"
+      ]
+    }
+  ]
+}
