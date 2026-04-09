@@ -397,6 +397,41 @@
           }
         },
         {
+          "title": "Navigation (JG)",
+          "id": "navigation-jg",
+          "model": "navigation-jg",
+          "filter": "navigation-jg",
+          "plugins": {
+            "da": {
+              "title": "Navigation (JG)",
+              "rows": 3,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Navigation Item (JG)",
+          "id": "navigation-jg-item",
+          "model": "navigation-jg-item",
+          "plugins": {
+            "da": {
+              "title": "Navigation Item (JG)",
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "categoryName",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "subLinks",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Commerce Account Header",
           "id": "commerce-account-header",
           "model": "commerce-account-header",
