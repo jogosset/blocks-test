@@ -106,6 +106,12 @@
     ]
   },
   {
+    "id": "navigation-bar",
+    "components": [
+      "navigation-bar-item"
+    ]
+  },
+  {
     "id": "navigation-jg",
     "components": [
       "navigation-jg-item"
