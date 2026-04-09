@@ -404,7 +404,7 @@
           "plugins": {
             "da": {
               "title": "Navigation (JG)",
-              "rows": 3,
+              "rows": 4,
               "columns": 2
             }
           }

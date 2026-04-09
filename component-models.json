@@ -935,6 +935,21 @@
         "label": "Text Color",
         "description": "Hex color for the navigation text (e.g., #ffffff)",
         "value": "#ffffff"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "hoverAccentColor",
+        "label": "Hover Accent Color",
+        "description": "Hex color for the hover underline accent (e.g., #3b82f6)",
+        "value": "#3b82f6"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "breadcrumb",
+        "label": "Breadcrumb",
+        "description": "Optional breadcrumb trail with links separated by >. Example: Home > Category > Page"
       }
     ]
   },
@@ -949,11 +964,46 @@
         "description": "Top-level navigation category name (e.g., Aviation Parts)"
       },
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
-        "name": "subLinks",
-        "label": "Sub-Navigation Links",
-        "description": "Bullet list of links to PLP pages. Use a bulleted list with each item as a link."
+        "name": "subLink1Label",
+        "label": "Sub-Link 1 Label",
+        "description": "Label for the first sub-navigation link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subLink1Url",
+        "label": "Sub-Link 1 URL",
+        "description": "URL path for the first sub-navigation link (e.g., /plp/tires)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subLink2Label",
+        "label": "Sub-Link 2 Label",
+        "description": "Label for the second sub-navigation link (optional)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subLink2Url",
+        "label": "Sub-Link 2 URL",
+        "description": "URL path for the second sub-navigation link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subLink3Label",
+        "label": "Sub-Link 3 Label",
+        "description": "Label for the third sub-navigation link (optional)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subLink3Url",
+        "label": "Sub-Link 3 URL",
+        "description": "URL path for the third sub-navigation link"
       }
     ]
   },

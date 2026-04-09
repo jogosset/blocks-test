@@ -1,32 +1,36 @@
 # Navigation JG Block
 
-A full-width navigation bar with configurable background and text colors, hover effects on top-level items, and dropdown sub-navigation menus linking to PLP pages. The navigation items are centered within the bar, and the bar itself spans the entire page width.
+A full-width navigation bar with author-configurable background color, text color, and hover accent color (bottom-border underline). Supports dropdown sub-navigation linking to PLP pages, an optional breadcrumb row, and a mobile hamburger menu. Works in both DA.live and Universal Editor.
 
 ## Who Should Use It
 
-Content authors and merchandisers who need a storefront category navigation bar.
+Content authors and merchandisers who need a storefront category navigation bar with breadcrumb support.
 
 ## DA.live Authoring Instructions
 
-Create a block table with the header **navigation-jg** and the following rows:
+Create a block table with the header **Navigation (JG)** and the following rows:
 
-| navigation-jg | |
+| Navigation (JG) | |
 |---|---|
 | Background Color | #1b1f3e |
 | Text Color | #ffffff |
+| Hover Accent Color | #3b82f6 |
 | Aviation Parts | - [Tires](/plp/tires) |
 | Aircraft Components | - [De-Icing](/plp/de-icing)<br>- [Air Pumps](/plp/air-pumps) |
 | Aircraft Parts | - [Windows](/plp/windows) |
 | Aircraft Electrical | - [Chargers](/plp/chargers)<br>- [Batteries](/plp/batteries) |
-| Products | - [All Products](/plp/products) |
+| Products | |
+| Breadcrumb | [Home](/) > [Aircraft Components](/plp/aircraft-components) > [Air Pumps](/plp/air-pumps) > RA 442CW Dry Air Pump |
 
 ### Row Details
 
-- **Row 1 (Background Color)**: Hex color code for the nav bar background. Default: `#1b1f3e`
-- **Row 2 (Text Color)**: Hex color code for the nav text. Default: `#ffffff`
-- **Rows 3+**: Each row is a navigation category. Column 1 = category name, Column 2 = a bulleted list of links to sub-pages (PLP pages).
+- **Background Color**: Hex color code for the nav bar background. Default: `#1b1f3e`
+- **Text Color**: Hex color code for the nav text. Default: `#ffffff`
+- **Hover Accent Color**: Hex color for the bottom-border underline on hover. Default: `#3b82f6`
+- **Nav Item Rows**: Col 1 = category name, Col 2 = bulleted list of sub-links. Leave Col 2 empty for a direct link item (no dropdown/chevron).
+- **Breadcrumb** (optional): Last row. Links separated by `>`. The final segment renders as plain text (current page).
 
-If a category has no sub-links, it renders as a simple link without a dropdown chevron.
+You can add as many nav item rows as needed — there is no limit.
 
 ## Universal Editor Fields
 
@@ -35,31 +39,38 @@ If a category has no sub-links, it renders as a simple link without a dropdown c
 |---|---|---|
 | Background Color | text | Hex color for nav bar background (default: #1b1f3e) |
 | Text Color | text | Hex color for nav text (default: #ffffff) |
+| Hover Accent Color | text | Hex color for hover underline (default: #3b82f6) |
+| Breadcrumb | richtext | Optional breadcrumb trail with links separated by > |
 
-### Navigation Item (JG) - Child
+### Navigation Item (JG) - Child (add as many as needed)
 | Field | Type | Description |
 |---|---|---|
 | Category Name | text | Top-level category label |
-| Sub-Navigation Links | richtext | Bulleted list of links to PLP pages |
+| Sub-Link 1 Label | text | First sub-link label |
+| Sub-Link 1 URL | text | First sub-link path |
+| Sub-Link 2 Label | text | Second sub-link label (optional) |
+| Sub-Link 2 URL | text | Second sub-link path |
+| Sub-Link 3 Label | text | Third sub-link label (optional) |
+| Sub-Link 3 URL | text | Third sub-link path |
 
 ## Configuration Options
 
-- **Background Color**: Any valid CSS color value (hex recommended)
-- **Text Color**: Any valid CSS color value (hex recommended)
-- **Hover Effect**: Built-in semi-transparent white overlay on hover
-- **Dropdown**: Automatically shown for categories with sub-links
-- **Chevron**: Automatically added for categories with sub-links
+- **Background Color**: Any valid hex color value
+- **Text Color**: Any valid hex color value
+- **Hover Accent Color**: Any valid hex color value (renders as bottom-border underline)
+- **Breadcrumb**: Optional — omit the row entirely to hide breadcrumbs
+- **Nav Items**: Add as many top-level categories as needed. Each can have up to 3 sub-links in UE, unlimited in DA.live via bullet list.
 
 ## Responsive Behavior
 
-- **Desktop (900px+)**: Horizontal centered nav bar with hover dropdowns
-- **Mobile (<900px)**: Hamburger menu with tap-to-expand categories
+- **Desktop (900px+)**: Horizontal centered nav bar with hover dropdowns and breadcrumb row
+- **Mobile (<900px)**: Hamburger menu with tap-to-expand categories; breadcrumb wraps
 
 ## Known Limitations
 
-- No mega-menu support (single column dropdown only)
-- Hover color is a fixed semi-transparent white overlay (not author-configurable)
-- No logo/brand slot in this block (use alongside the existing header block)
+- UE nav items support up to 3 sub-links per category (DA.live has no limit via bullet list)
+- Hover accent is a bottom-border underline only
+- No mega-menu layout (single column dropdown)
 
 ## Developer Notes
 
@@ -67,17 +78,12 @@ If a category has no sub-links, it renders as a simple link without a dropdown c
 ```
 blocks/navigation-jg/
 ├── navigation-jg.js       # Block decoration logic
-├── navigation-jg.css      # Styles (mobile-first, responsive)
+├── navigation-jg.css      # Mobile-first responsive styles
 ├── _navigation-jg.json    # Universal Editor component config
 └── README.md              # This file
 ```
 
-### Key Functions
-- `decorate(block)`: Extracts config rows (background/text color) and nav item rows, builds semantic nav HTML with dropdowns and hover behavior
-- Config rows identified by label matching ("background color", "text color")
-- Remaining rows treated as navigation categories
-
-### CSS Custom Properties
-The block sets these CSS variables from author input:
+### CSS Custom Properties (set from author input)
 - `--nav-bg-color`: Background color
 - `--nav-text-color`: Text color
+- `--nav-accent-color`: Hover accent underline color
