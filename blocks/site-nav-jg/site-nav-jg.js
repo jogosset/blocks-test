@@ -78,6 +78,12 @@ export default function decorate(block) {
               href: link.href,
             });
           });
+        } else if (col2Text) {
+          // Plain text sub-item on the category row (no link)
+          navItems[navItems.length - 1].subItems.push({
+            label: col2Text,
+            href: '#',
+          });
         }
       }
     } else if (col2 && navItems.length > 0) {
