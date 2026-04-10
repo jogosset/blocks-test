@@ -88,12 +88,28 @@ function buildAutoBlocks(main) {
  * Decorates the main element.
  * @param {Element} main The main element
  */
+/**
+ * Applies custom section metadata CSS variables.
+ * Reads data attributes set by decorateSections() and maps them to
+ * inline CSS custom properties for dynamic styling.
+ * @param {Element} main The main element
+ */
+function applySectionMetadataStyles(main) {
+  main.querySelectorAll('.section.highlight[data-highlight-color]').forEach((section) => {
+    const color = section.dataset.highlightColor;
+    if (color) {
+      section.style.setProperty('--section-highlight-color', color);
+    }
+  });
+}
+
 export function decorateMain(main) {
   decorateLinks(main);
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  applySectionMetadataStyles(main);
   decorateBlocks(main);
 }
 

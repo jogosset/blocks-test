@@ -28,6 +28,13 @@
           ]
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "highlight-color",
+          "label": "Highlight Color",
+          "description": "Custom background color for the highlight style (hex value, e.g. #75C0E6). Only applies when Style is set to Highlight."
+        },
+        {
           "component": "select",
           "name": "padding",
           "label": "Padding",
