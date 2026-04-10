@@ -50,8 +50,7 @@
       "product-list-page",
       "product-recommendations",
       "targeted-block",
-      "navigation-jg",
-      "navigation-bar",
+      "site-nav-jg",
       "text"
     ]
   },
@@ -108,20 +107,14 @@
     ]
   },
   {
-    "id": "navigation-bar",
-    "components": [
-      "navigation-bar-item"
-    ]
-  },
-  {
-    "id": "navigation-jg",
-    "components": [
-      "navigation-jg-item"
-    ]
-  },
-  {
     "id": "search-bar",
     "components": []
+  },
+  {
+    "id": "site-nav-jg",
+    "components": [
+      "site-nav-jg-item"
+    ]
   },
   {
     "id": "store-locator",

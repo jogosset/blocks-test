@@ -397,60 +397,25 @@
           }
         },
         {
-          "title": "Navigation (JG)",
-          "id": "navigation-jg",
-          "model": "navigation-jg",
-          "filter": "navigation-jg",
+          "title": "Site Nav (JG)",
+          "id": "site-nav-jg",
+          "model": "site-nav-jg",
+          "filter": "site-nav-jg",
           "plugins": {
             "da": {
-              "title": "Navigation (JG)",
-              "rows": 4,
+              "title": "Site Nav (JG)",
+              "rows": 10,
               "columns": 2
             }
           }
         },
         {
-          "title": "Navigation Item (JG)",
-          "id": "navigation-jg-item",
-          "model": "navigation-jg-item",
+          "title": "Site Nav Item (JG)",
+          "id": "site-nav-jg-item",
+          "model": "site-nav-jg-item",
           "plugins": {
             "da": {
-              "title": "Navigation Item (JG)",
-              "rows": 1,
-              "columns": 2,
-              "fields": [
-                {
-                  "name": "categoryName",
-                  "selector": "div:nth-child(1)"
-                },
-                {
-                  "name": "subLinks",
-                  "selector": "div:nth-child(2)"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Navigation Bar",
-          "id": "navigation-bar",
-          "model": "navigation-bar",
-          "filter": "navigation-bar",
-          "plugins": {
-            "da": {
-              "title": "Navigation Bar",
-              "rows": 5,
-              "columns": 2
-            }
-          }
-        },
-        {
-          "title": "Nav Item",
-          "id": "navigation-bar-item",
-          "model": "navigation-bar-item",
-          "plugins": {
-            "da": {
-              "title": "Nav Item",
+              "title": "Site Nav Item (JG)",
               "rows": 1,
               "columns": 2,
               "fields": [
@@ -944,4 +909,3 @@
     }
   ]
 }
-

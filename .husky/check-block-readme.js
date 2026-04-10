@@ -41,6 +41,28 @@ function getChangedFiles() {
   }
 }
 
+function getDeletedBlocks() {
+  try {
+    // Get staged files that are being deleted
+    const deletedFiles = execSync('git diff --cached --name-only --diff-filter=D', { encoding: 'utf8' })
+      .trim()
+      .split('\n')
+      .filter((file) => file.length > 0 && file.startsWith('blocks/'));
+
+    // A block is fully deleted if its directory no longer exists
+    const deletedBlocks = new Set();
+    deletedFiles.forEach((file) => {
+      const blockDir = file.split('/')[1];
+      if (blockDir && !fs.existsSync(path.join('blocks', blockDir))) {
+        deletedBlocks.add(blockDir);
+      }
+    });
+    return deletedBlocks;
+  } catch {
+    return new Set();
+  }
+}
+
 function checkBlockChanges(changedFiles) {
   const blockChanges = changedFiles.filter((file) => file.startsWith('blocks/')
     && !file.endsWith('README.md')
@@ -50,17 +72,20 @@ function checkBlockChanges(changedFiles) {
     return { hasChanges: false, changedBlocks: [] };
   }
 
-  // Group changes by block directory
+  // Get blocks that are being fully deleted (skip README check for these)
+  const deletedBlocks = getDeletedBlocks();
+
+  // Group changes by block directory, excluding fully deleted blocks
   const changedBlocks = new Set();
   blockChanges.forEach((file) => {
     const blockDir = file.split('/')[1]; // Get the block name (e.g., 'commerce-cart' from 'blocks/commerce-cart/...')
-    if (blockDir) {
+    if (blockDir && !deletedBlocks.has(blockDir)) {
       changedBlocks.add(blockDir);
     }
   });
 
   return {
-    hasChanges: true,
+    hasChanges: changedBlocks.size > 0,
     changedBlocks: Array.from(changedBlocks),
     changedFiles: blockChanges,
   };
